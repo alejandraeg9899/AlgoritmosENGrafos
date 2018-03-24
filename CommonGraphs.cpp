@@ -117,6 +117,16 @@ Graph Random(int num_verts, int num_edges)
 	return G;
 }
 
+Graph TreeRandom(int n)
+{
+	Graph G(n);
+		for (int i = 1, i < n, ++i){
+		int nodo_seleccionado = random_int(0, i);
+		G.add_edge(nodo_seleccionado,i);
+	}
+	return G;
+}
+
 Graph Grid(int n, int m)
 {
 	Graph G((n+1)*(m+1));
