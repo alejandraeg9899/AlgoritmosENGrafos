@@ -156,4 +156,23 @@ Graph Grid(int n, int m)
 	return G;
 
 }
+
+Graph AlbertBarabanasi (int n, int k)
+{
+	Graph(n);
+
+	for (int i = 0; i < k; ++i)
+	{
+		for (int j = i + 1; j < k; ++j)
+		{
+			G.add_edge(i, j);
+		}
+	}
+	return G;
+}
+
+Graph PreferentialAttachment()
+{
+	
+}
 }
