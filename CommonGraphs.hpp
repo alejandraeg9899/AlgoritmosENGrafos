@@ -26,4 +26,8 @@ Graph Grid(int n, int m);
 
 Graph AlbertBarabanasi(int n, int k);
 
+Graph RamdonGraph (int n, int p);
+
+Graph GrpahRandom (int num_verts, int num_edges);
+
 }; // namespace graphs

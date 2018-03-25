@@ -157,9 +157,9 @@ Graph Grid(int n, int m)
 
 }
 
-Graph AlbertBarabanasi (int n, int k)
+Graph AlbertBarabanasi (int k)
 {
-	Graph(n);
+	Graph G(k); //n?
 
 	for (int i = 0; i < k; ++i)
 	{
@@ -171,8 +171,47 @@ Graph AlbertBarabanasi (int n, int k)
 	return G;
 }
 
+//Modelo Erdos-Renyi
+//Grafo Aleatorio con n vertices y probabilidad p
+Graph RamdonGraph (int n, int p)
+{
+	Graph G(n);
+
+	for(i : G.vertices())
+	{
+		for(int j = i+1; j < G.num_vertices(); ++j)
+		{
+			if(probability_of_true(p))
+				G.add_edge(i, j);
+		}
+	}
+	return G;
+}
+
 Graph PreferentialAttachment()
 {
-	
+
 }
+
+//Modelo Erdos-Renyi
+//Grafo Aleatorio con n vertices y exactamente m aristas
+Graph GrpahRandom (int num_verts, int num_edges)
+{
+	Graph G(num_verts);
+
+	while(G.num_vertices < num_edges);
+	{
+		int u = random_int(G.num_vertices);
+		int v = random_int(G.num_vertices);
+		if (u == v)
+			continue;
+
+			std::unordered_set<Graph::Edge> Usados;
+
+		G.add_edge_no_repeat(u,v);
+	}
+
+	return G;
+}
+
 }
